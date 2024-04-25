@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Component</title>
+    <style>
+      /*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+      /* Main color: #087f5b */
+      /* Text color: #343a40 */
+
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+      .carousel {
+        width: 800px;
+        margin: 100px auto;
+        background-color: #087f5b;
+        padding: 32px 48px 32px 120px;
+        /* padding-left: 120px; */
+        border-radius: 8px;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        gap: 64px;
+      }
+
+      img {
+        height: 200px;
+        border-radius: 8px;
+        transform: scale(1.9);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+        margin-right: 64px;
+      }
+
+      /* .testimonial {
+      } */
+      .testimonial-text {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        color: #e6fcf5;
+      }
+      .testimonial-author {
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #c3fae8;
+      }
+      .testimonial-job {
+        font-size: 12px;
+        color: #c3fae8;
+      }
+
+      .button {
+        background-color: #fff;
+        border: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        border-radius: 50%;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        fill: #087f5b;
+      }
+
+      .btn-left {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 24px 24px rgba(0, 0, 0, 0.25);
+      }
+
+      .btn-rght {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        box-shadow: 0 24px 24px rgba(0, 0, 0, 0.25);
+      }
+
+      .dots {
+        position: absolute;
+
+        left: 50%;
+        bottom: 0;
+        /* right: 50%; */
+        transform: translate(50%, 25px);
+
+        display: flex;
+        gap: 12px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .dot-fill {
+        background-color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img src="./maria.jpg" alt="maria def Almeida" />
+
+      <blockquote class="testimonial">
+        <p class="testimonial-text">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+          dolores! Tenetur dolores nihil ducimus consequuntur officia assumenda"
+        </p>
+
+        <p class="testimonial-author">Maria De Almeida</p>
+
+        <p class="testimonial-job">Senior product manager at EDP comercial</p>
+      </blockquote>
+
+      <button class="button btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="#000000"
+          viewBox="0 0 256 256"
+          class="btn-icon"
+        >
+          <path
+            d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"
+          ></path>
+        </svg>
+      </button>
+      <button class="button btn-rght">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="#000000"
+          viewBox="0 0 256 256"
+          class="btn-icon"
+        >
+          <path
+            d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
+          ></path>
+        </svg>
+      </button>
+
+      <div class="dots">
+        <button class="dot dot-fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero section</title>
+
+    <style>
+      /*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+      /* Main color: #087f5b */
+      /* Text color: #343a40 */
+
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      .container {
+        margin: 0 auto;
+        width: 1200px;
+      }
+
+      html {
+        font-family: "Roboto", sans-serif;
+
+        color: #444;
+      }
+      header {
+        height: 100vh;
+        color: #fff;
+
+        position: relative;
+
+        background-image: linear-gradient(
+            rgba(49, 49, 49, 0.6),
+            rgba(46, 46, 46, 0.6)
+          ),
+          url(./hero.jpg);
+        background-size: cover;
+      }
+
+      nav {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-top: 32px;
+        color: #fff;
+      }
+
+      .header-container {
+        width: 1200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+      }
+
+      .header-container-inner {
+        width: 50%;
+      }
+      h1 {
+        font-size: 52px;
+        margin-bottom: 32px;
+        line-height: 1.05;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 48px;
+      }
+      .btn:link,
+      .btn:visited {
+        font-size: 20px;
+        font-weight: 600;
+        background-color: #e67e22;
+        color: #fff;
+        text-decoration: none;
+
+        display: inline-block;
+        padding: 16px 32px;
+        border-radius: 9px;
+      }
+
+      h2 {
+        font-size: 44px;
+        margin-bottom: 48px;
+      }
+
+      section {
+        padding: 96px 0;
+        background-color: #f7f7f7;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div>Logo</div>
+        <div>Navigation</div>
+      </nav>
+
+      <div class="header-container">
+        <div class="header-container-inner">
+          <h1>A healthy meal delivered to your door every day</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
+            non saepe architecto! Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Atque doloribus totam voluptas corrupti aliquam
+            quaerat amet, in dolores saepe molestiae blanditiis! Tempora non
+            reprehenderit esse alias, inventore saepe? Laboriosam sequi enim,
+            quo sunt illum exercitationem.
+          </p>
+
+          <a href="#" class="btn">Start Eating Well</a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <h2>Some random heading</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+          deleniti libero ducimus modi magnam qui, optio voluptates error saepe
+          tempora eos aut id rerum itaque!
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
